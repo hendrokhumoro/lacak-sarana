@@ -78,9 +78,9 @@ if (!ORDER) {
     .then(r => r.json())
     .then(render)
     .catch(err => {
-      document.getElementById("box").textContent = "Gagal memuat data.";
+      document.getElementById("box").textContent = "Gagal memuat data: " + err.message;
       console.error(err);
-    });
+      });
 }
 </script>
 </body>
